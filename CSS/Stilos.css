@@ -1,0 +1,107 @@
+*{
+    background:#F3F5FC;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 150%;
+    overflow-y: hidden;
+    
+}
+
+.logo{
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 20px;
+}
+.div{
+	display: flex;
+	justify-content: space-between;
+}
+.grid-container{
+	display: flex;
+	justify-content: space-between;
+
+}
+
+section{
+	margin-left: 120px;
+}
+.text-area{
+	height: 300px;
+    color: #0A3871;
+    margin-top: 30px;
+    padding: 2px;
+	border: none;
+    text-transform: lowercase;
+}
+
+::placeholder { color: #0A3871; }
+  .text-area:focus {
+	  outline: none;
+	}
+
+.aside{
+    height: 540px;
+	width: 250px;
+	left: 1000px;
+	margin-right: 70px;
+    background: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 24px;
+    color: #0A3871;
+    padding-left: 20px;
+}
+
+
+.mensaje:focus {
+    outline: none;
+}
+
+.botones{
+    display: flex;
+    margin-top: 18px;
+}
+
+.encriptar {
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.desencriptar {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.copiar {
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 108px;
+    margin-top: 470px;
+    position: absolute;
+    width: 336px;
+}
+
+.informacion {
+    color: #495057;
+    font-size:18px;
+}
+
+p{
+	background-color: white;
+}
+

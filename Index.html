@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Stilos.css">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="/Imagenes/Logo.png" alt="logo de alura" >
+    </header>
+<div class="div">
+  <div class="grid-container">
+    <section>
+        <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+        <div>
+            <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
+        </div>
+
+        <div class="botones">
+            <button id="button" class="encriptar">Encriptar</button>
+            <button id="button2" class="desencriptar" >Desencriptar</buttonclass=>
+        </div>
+    </section>
+  </div>
+  <aside class="aside">
+    <p id="encript">
+
+    </p>
+    <p id="desencript">
+
+    </p>
+</aside>
+</div>
+<script>
+    var frase = document.querySelector("textarea");
+    var button = document.getElementById("button");
+    var button2 = document.getElementById("button2");
+    var text_encript = [];
+    var text_norm =[];
+
+    function encript() {
+        var text = frase.value;
+        var j = 4;
+        for (i = 0; i < text.length; i++) {
+            var caracter = text.charAt(i);
+            if (caracter == 'a') {
+                text_encript[i] = "ai";
+            } else {
+                if (caracter == 'e') {
+                    text_encript[i] = "enter";
+                } else {
+                    if (caracter == 'i') {
+                        text_encript[i] = "imes";
+                    } else {
+                        if (caracter == 'o') {
+                            text_encript[i] = "ober";
+                        } else {
+                            if (caracter == 'u') {
+                                text_encript[i] = "ufat";
+                            } else {
+                                text_encript[i] = caracter;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        textEncript= text_encript.join('');
+        document.getElementById('encript').innerHTML += textEncript;
+    }
+
+    function desencript() {
+        for (i = 0; i < text_encript.length; i++) {
+            if (text_encript[i] == "ai") {
+                text_norm[i] = 'a';
+            } else {
+                if (text_encript[i] == "enter") {
+                    text_norm[i] = "e";
+                } else {
+                    if (text_encript[i] == 'imes') {
+                        text_norm[i] = "i";
+                    } else {
+                        if (text_encript[i] == 'ober') {
+                            text_norm[i] = "o";
+                        } else {
+                            if (text_encript[i] == 'ufat') {
+                                text_norm[i] = "ufat";
+                            } else {
+                                text_norm[i] = text_encript[i];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        textDesencript=text_norm.join('')
+        document.getElementById('desencript').innerHTML += textDesencript;
+    }
+    button.onclick = encript;
+    button2.onclick = desencript;
+</script>
+</body>
+</html>
